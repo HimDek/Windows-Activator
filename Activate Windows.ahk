@@ -1,11 +1,11 @@
-﻿#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
+#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
 ; #Warn  ; Enable warnings to assist with detecting common errors.
 #SingleInstance Force
 #NoTrayIcon
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
-versionnumber:="1.0"
+versionnumber:="1.1"
 version:=StrReplace("vnumber", "number", versionnumber)
 versionname:=StrReplace("Version number", "number", versionnumber)
 
@@ -24,21 +24,21 @@ if not (A_IsAdmin or RegExMatch(full_command_line, " /restart(?!\S)"))
 }
 
 GUI:
-    GUI, Main:New, -MinimizeBox, Windows Activation Tool %versionname%
-    GUI, Add, GroupBox, w280 h55 vBox, Select Windows Version and Edition:
-    GUI, Add, Text, xp+10 yp+25 vTxt, Windows
-    GUI, Add, DropDownList, xp+50 yp-5 w50 vWindows gWindows, 8|8.1|10|11
-    GUI, Add, DropDownList, xp+60 yp w150 vWin8Ed gActivate, Home|Home Single Language|Professional|Professional N|Professional WMC|Enterprice|Enterprice N
-    GUI, Add, DropDownList, xp yp w150 vWin8p1Ed gActivate, Home|Home N|Home Single Language|Professional|Professional N|Professional WMC|Enterprice|Enterprice N
-    GUI, Add, DropDownList, xp yp w150 vWin10Ed gActivate, Home|Home N|Home Single Language|Home Country Specific|Professional|Professional N|Education|Education N|Enterprice|Enterprice N
-    GUI, Add, DropDownList, xp yp w150 vWin11Ed gActivate, Home|Home N|Home Single Language|Home Country Specific|Professional|Professional N|Education|Education N|Enterprice|Enterprice N
-    GUI, Add, Text, xm w280 0x1 yp vActtext,
+	GUI, Main:New, -MinimizeBox +HwndMain, Activate
+	GUI, Main:Margin, 10, 10
+    GUI, Add, Text, xm+10 ym+15 w50 h30 vTxt, Windows
+    GUI, Add, DropDownList, xp+50 yp-5 w40 vWindows gWindows, 8|8.1|10|11
+    GUI, Add, DropDownList, xp+50 yp w134 vWin8Ed gActivate, Home|Home Single Language|Professional|Professional N|Professional WMC|Enterprice|Enterprice N
+    GUI, Add, DropDownList, xp yp wp vWin8p1Ed gActivate, Home|Home N|Home Single Language|Professional|Professional N|Professional WMC|Enterprice|Enterprice N
+    GUI, Add, DropDownList, xp yp wp vWin10Ed gActivate, Home|Home N|Home Single Language|Home Country Specific|Professional|Professional N|Education|Education N|Enterprice|Enterprice N
+    GUI, Add, DropDownList, xp yp wp vWin11Ed gActivate, Home|Home N|Home Single Language|Home Country Specific|Professional|Professional N|Education|Education N|Enterprice|Enterprice N
+    GUI, Add, Text, xm w254 0x1 yp+5 vActtext,
     GUIControl, Main:Hide, Win8Ed
     GUIControl, Main:Hide, Win8p1Ed
     GUIControl, Main:Hide, Win10Ed
     GUIControl, Main:Hide, Win11Ed
     GUIControl, Main:Hide, Acttext
-    GUI, Main:Show
+    GUI, Main:Show, w130
 Return
 
 MainGUIClose:
@@ -46,6 +46,9 @@ MainGUIClose:
 Return
 
 Windows:
+	If (Windows=="") {
+		Resize(Main, 280, , 5)
+	}
     Gui, Submit , NoHide
     GUIControl, Main:Hide, Win8Ed
     GUIControl, Main:Hide, Win8p1Ed
@@ -90,7 +93,6 @@ FinalActivate:
 Return
 
 GenerateKey:
-    GUIControl, Main:Hide, Box
     GUIControl, Main:Hide, Txt
     GUIControl, Main:Hide, Windows
     GUIControl, Main:Hide, Win8Ed
@@ -217,3 +219,29 @@ GenerateKey:
         }
     }
 Return
+
+
+Resize(GUIHwnd, Width:="same", Height:="same", Frames:=1, Rate:=16) {
+	WinDelay := A_WinDelay
+	SetWinDelay, %Rate% 
+	WinGetPos, X, Y, W, H, ahk_id %GUIHwnd%
+	If (Width=="same") {
+		Width:=W
+	}
+	If (Height=="same") {
+		Height:=H
+	}
+	WidthpF:=(Width-W)//Frames
+	HeightpF:=(Height-H)//Frames
+	Loop, %Frames% {
+		WinGetPos, X, Y, W, H, ahk_id %GUIHwnd%
+		X -= (WidthpF // 2)
+		Y -= (HeightpF // 2)
+		W += WidthpF
+		H += HeightpF
+		WinMove, ahk_id %GUIHwnd%, , X, Y, W, H
+	}
+	SetWinDelay, %WinDelay%
+	WinMove, ahk_id %GUIHwnd%, , , , Width, Height
+	Return
+}
