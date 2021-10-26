@@ -11,7 +11,6 @@ namespace Windows_Activator
 {
     public partial class Form_Activate : Form
     {
-        String Windows, Win8Ed, Win8p1Ed, Win10Ed, Win11Ed, Edition, key;
 
         public Form_Activate()
         {
@@ -20,97 +19,80 @@ namespace Windows_Activator
 
         private void comboBox_Windows_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Windows = comboBox_Windows.Text;
-
-            comboBox_Blank.Visible = false;
-
-            comboBox_8.Visible = false;
-            comboBox_8.Enabled = false;
-
-            comboBox_8p1.Visible = false;
-            comboBox_8p1.Enabled = false;
-
-            comboBox_10.Visible = false;
-            comboBox_10.Enabled = false;
-
-            comboBox_11.Visible = false;
-            comboBox_11.Enabled = false;
-
-            if (Windows == "8")
+            if (comboBox_Windows.Text == "8")
             {
-                comboBox_8.Visible = true;
-                comboBox_8.Enabled = true;
+                comboBox_Edition.Items.Clear();
+                comboBox_Edition.Items.Add("Home");
+                comboBox_Edition.Items.Add("Home Single Language");
+                comboBox_Edition.Items.Add("Professional");
+                comboBox_Edition.Items.Add("Professional N");
+                comboBox_Edition.Items.Add("Professional WMC");
+                comboBox_Edition.Items.Add("Enterprice");
+                comboBox_Edition.Items.Add("Enterprice N");
             }
 
-            if (Windows == "8.1")
+            if (comboBox_Windows.Text == "8.1")
             {
-                comboBox_8p1.Visible = true;
-                comboBox_8p1.Enabled = true;
+                comboBox_Edition.Items.Clear();
+                comboBox_Edition.Items.Add("Home");
+                comboBox_Edition.Items.Add("Home N");
+                comboBox_Edition.Items.Add("Home Single Language");
+                comboBox_Edition.Items.Add("Professional");
+                comboBox_Edition.Items.Add("Professional N");
+                comboBox_Edition.Items.Add("Professional WMC");
+                comboBox_Edition.Items.Add("Enterprice");
+                comboBox_Edition.Items.Add("Enterprice N");
             }
 
-            if (Windows == "10")
+            if (comboBox_Windows.Text == "10")
             {
-                comboBox_10.Visible = true;
-                comboBox_10.Enabled = true;
+                comboBox_Edition.Items.Clear();
+                comboBox_Edition.Items.Add("Home");
+                comboBox_Edition.Items.Add("Home N");
+                comboBox_Edition.Items.Add("Home Single Language");
+                comboBox_Edition.Items.Add("Home Country Specific");
+                comboBox_Edition.Items.Add("Professional");
+                comboBox_Edition.Items.Add("Professional N");
+                comboBox_Edition.Items.Add("Education");
+                comboBox_Edition.Items.Add("Education N");
+                comboBox_Edition.Items.Add("Enterprice");
+                comboBox_Edition.Items.Add("Enterprice N");
             }
 
-            if (Windows == "11")
+            if (comboBox_Windows.Text == "11")
             {
-                comboBox_11.Visible = true;
-                comboBox_11.Enabled = true;
+                comboBox_Edition.Items.Clear();
+                comboBox_Edition.Items.Add("Home");
+                comboBox_Edition.Items.Add("Home N");
+                comboBox_Edition.Items.Add("Home Single Language");
+                comboBox_Edition.Items.Add("Home Country Specific");
+                comboBox_Edition.Items.Add("Professional");
+                comboBox_Edition.Items.Add("Professional N");
+                comboBox_Edition.Items.Add("Education");
+                comboBox_Edition.Items.Add("Education N");
+                comboBox_Edition.Items.Add("Enterprice");
+                comboBox_Edition.Items.Add("Enterprice N");
             }
+
+            comboBox_Edition.Enabled = true;
         }
 
-        private void comboBox_8_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            Win8Ed = comboBox_8.Text;
-            Activate();
-        }
-
-        private void comboBox_8p1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            Win8p1Ed = comboBox_8p1.Text;
-            Activate();
-        }
-
-        private void comboBox_10_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            Win10Ed = comboBox_10.Text;
-            Activate();
-        }
-
-        private void comboBox_11_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            Win11Ed = comboBox_11.Text;
-            Activate();
-        }
-
-        private new void Activate()
+        private void comboBox_Edition_SelectedIndexChanged(object sender, EventArgs e)
         {
             label_Windows.Visible = false;
-
-            comboBox_8.Visible = false;
-            comboBox_8.Enabled = false;
-
-            comboBox_8p1.Visible = false;
-            comboBox_8p1.Enabled = false;
-
-            comboBox_10.Visible = false;
-            comboBox_10.Enabled = false;
-
-            comboBox_11.Visible = false;
-            comboBox_11.Enabled = false;
-
+            comboBox_Edition.Visible = false;
             comboBox_Windows.Visible = false;
-            comboBox_Windows.Enabled = false;
-
-            GenerateKey();
-            InstallKey();
-            KMS();
-            FinalActivate();
+            Activate(comboBox_Windows.Text, comboBox_Edition.Text);
         }
 
-        private void InstallKey()
+        private void Activate(String Windows, String Edition)
+        {
+            InstallKey(GenerateKey(Windows, Edition));
+            KMS();
+            FinalActivate(Windows, Edition);
+        }
+
+        private void InstallKey(String key)
         {
             label_Windows.Text = "Installing Product Key!";
             cmd("/c slmgr /ipk " + key);
@@ -122,14 +104,14 @@ namespace Windows_Activator
             cmd("/c slmgr /skms kms8.msguides.com");
         }
 
-        private void FinalActivate()
+        private void FinalActivate(String Windows, String Edition)
         {
             label_Windows.Text = "Activating Windows " + Windows + " " + Edition + "!";
             cmd("/c slmgr /ato");
             Application.Exit();
         }
 
-        private void GenerateKey()
+        private String GenerateKey(String Windows, String Edition)
         {
             label_Windows.Padding = new Padding(0, 0, 0, 0); 
             label_Windows.Dock = DockStyle.Fill;
@@ -138,163 +120,160 @@ namespace Windows_Activator
 
             if (Windows == "8")
             {
-                Edition = Win8Ed;
-                if (Win8Ed == "Home")
+                if (Edition == "Home")
                 {
-                    key = "BN3D2-R7TKB-3YPBD-8DRP2-27GG4";
+                    return "BN3D2-R7TKB-3YPBD-8DRP2-27GG4";
                 }
-                if (Win8Ed == "Home Single Language")
+                if (Edition == "Home Single Language")
                 {
-                    key = "2WN2H-YGCQR-KFX6K-CD6TF-84YXQ";
+                    return "2WN2H-YGCQR-KFX6K-CD6TF-84YXQ";
                 }
-                if (Win8Ed == "Professional")
+                if (Edition == "Professional")
                 {
-                    key = "NG4HW-VH26C-733KW-K6F98-J8CK4";
+                    return "NG4HW-VH26C-733KW-K6F98-J8CK4";
                 }
-                if (Win8Ed == "Professional N")
+                if (Edition == "Professional N")
                 {
-                    key = "XCVCF-2NXM9-723PB-MHCB7-2RYQQ";
+                    return "XCVCF-2NXM9-723PB-MHCB7-2RYQQ";
                 }
-                if (Win8Ed == "Professional WMC")
+                if (Edition == "Professional WMC")
                 {
-                    key = "GNBB8-YVD74-QJHX6-27H4K-8QHDG";
+                    return "GNBB8-YVD74-QJHX6-27H4K-8QHDG";
                 }
-                if (Win8Ed == "Enterprice")
+                if (Edition == "Enterprice")
                 {
-                    key = "32JNW-9KQ84-P47T8-D8GGY-CWCK7";
+                    return "32JNW-9KQ84-P47T8-D8GGY-CWCK7";
                 }
-                if (Win8Ed == "Enterprice N")
+                if (Edition == "Enterprice N")
                 {
-                    key = "JMNMF-RHW7P-DMY6X-RF3DR-X2BQT";
+                    return "JMNMF-RHW7P-DMY6X-RF3DR-X2BQT";
                 }
             }
 
             if (Windows == "8.1")
             {
-                Edition = Win8p1Ed;
-                if (Win8p1Ed == "Home")
+                if (Edition == "Home")
                 {
-                    key = "M9Q9P-WNJJT-6PXPY-DWX8H-6XWKK";
+                    return "M9Q9P-WNJJT-6PXPY-DWX8H-6XWKK";
                 }
-                if (Win8p1Ed == "Home N")
+                if (Edition == "Home N")
                 {
-                    key = "7B9N3-D94CG-YTVHR-QBPX3-RJP64";
+                    return "7B9N3-D94CG-YTVHR-QBPX3-RJP64";
                 }
-                if (Win8p1Ed == "Home Single Language")
+                if (Edition == "Home Single Language")
                 {
-                    key = "BB6NG-PQ82V-VRDPW-8XVD2-V8P66";
+                    return "BB6NG-PQ82V-VRDPW-8XVD2-V8P66";
                 }
-                if (Win8p1Ed == "Professional")
+                if (Edition == "Professional")
                 {
-                    key = "GCRJD-8NW9H-F2CDX-CCM8D-9D6T9";
+                    return "GCRJD-8NW9H-F2CDX-CCM8D-9D6T9";
                 }
-                if (Win8p1Ed == "Professional N")
+                if (Edition == "Professional N")
                 {
-                    key = "HMCNV-VVBFX-7HMBH-CTY9B-B4FXY";
+                    return "HMCNV-VVBFX-7HMBH-CTY9B-B4FXY";
                 }
-                if (Win8p1Ed == "Professional WMC")
+                if (Edition == "Professional WMC")
                 {
-                    key = "789NJ-TQK6T-6XTH8-J39CJ-J8D3P";
+                    return "789NJ-TQK6T-6XTH8-J39CJ-J8D3P";
                 }
-                if (Win8p1Ed == "Enterprice")
+                if (Edition == "Enterprice")
                 {
-                    key = "MHF9N-XY6XB-WVXMC-BTDCT-MKKG7";
+                    return "MHF9N-XY6XB-WVXMC-BTDCT-MKKG7";
                 }
-                if (Win8p1Ed == "Enterprice N")
+                if (Edition == "Enterprice N")
                 {
-                    key = "TT4HM-HN7YT-62K67-RGRQJ-JFFXW";
+                    return "TT4HM-HN7YT-62K67-RGRQJ-JFFXW";
                 }
             }
 
             if (Windows == "10")
             {
-                Edition = Win10Ed;
-                if (Win10Ed == "Home")
+                if (Edition == "Home")
                 {
-                    key = "TX9XD-98N7V-6WMQ6-BX7FG-H8Q99";
+                    return "TX9XD-98N7V-6WMQ6-BX7FG-H8Q99";
                 }
-                if (Win10Ed == "Home N")
+                if (Edition == "Home N")
                 {
-                    key = "3KHY7-WNT83-DGQKR-F7HPR-844BM";
+                    return "3KHY7-WNT83-DGQKR-F7HPR-844BM";
                 }
-                if (Win10Ed == "Home Single Language")
+                if (Edition == "Home Single Language")
                 {
-                    key = "7HNRX-D7KGG-3K4RQ-4WPJ4-YTDFH";
+                    return "7HNRX-D7KGG-3K4RQ-4WPJ4-YTDFH";
                 }
-                if (Win10Ed == "Home Country Specific")
+                if (Edition == "Home Country Specific")
                 {
-                    key = "PVMJN-6DFY6-9CCP6-7BKTT-D3WVR";
+                    return "PVMJN-6DFY6-9CCP6-7BKTT-D3WVR";
                 }
-                if (Win10Ed == "Professional")
+                if (Edition == "Professional")
                 {
-                    key = "W269N-WFGWX-YVC9B-4J6C9-T83GX";
+                    return "W269N-WFGWX-YVC9B-4J6C9-T83GX";
                 }
-                if (Win10Ed == "Professional N")
+                if (Edition == "Professional N")
                 {
-                    key = "MH37W-N47XK-V7XM9-C7227-GCQG9";
+                    return "MH37W-N47XK-V7XM9-C7227-GCQG9";
                 }
-                if (Win10Ed == "Education")
+                if (Edition == "Education")
                 {
-                    key = "NW6C2-QMPVW-D7KKK-3GKT6-VCFB2";
+                    return "NW6C2-QMPVW-D7KKK-3GKT6-VCFB2";
                 }
-                if (Win10Ed == "Education N")
+                if (Edition == "Education N")
                 {
-                    key = "2WH4N-8QGBV-H22JP-CT43Q-MDWWJ";
+                    return "2WH4N-8QGBV-H22JP-CT43Q-MDWWJ";
                 }
-                if (Win10Ed == "Enterprice")
+                if (Edition == "Enterprice")
                 {
-                    key = "NPPR9-FWDCX-D2C8J-H872K-2YT43";
+                    return "NPPR9-FWDCX-D2C8J-H872K-2YT43";
                 }
-                if (Win10Ed == "Enterprice N")
+                if (Edition == "Enterprice N")
                 {
-                    key = "DPH2V-TTNVB-4X9Q3-TJR4H-KHJW4";
+                    return "DPH2V-TTNVB-4X9Q3-TJR4H-KHJW4";
                 }
             }
 
             if (Windows == "11")
             {
-                Edition = Win11Ed;
-                if (Win11Ed == "Home")
+                if (Edition == "Home")
                 {
-                    key = "TX9XD-98N7V-6WMQ6-BX7FG-H8Q99";
+                    return "TX9XD-98N7V-6WMQ6-BX7FG-H8Q99";
                 }
-                if (Win11Ed == "Home N")
+                if (Edition == "Home N")
                 {
-                    key = "3KHY7-WNT83-DGQKR-F7HPR-844BM";
+                    return "3KHY7-WNT83-DGQKR-F7HPR-844BM";
                 }
-                if (Win11Ed == "Home Single Language")
+                if (Edition == "Home Single Language")
                 {
-                    key = "7HNRX-D7KGG-3K4RQ-4WPJ4-YTDFH";
+                    return "7HNRX-D7KGG-3K4RQ-4WPJ4-YTDFH";
                 }
-                if (Win11Ed == "Home Country Specific")
+                if (Edition == "Home Country Specific")
                 {
-                    key = "PVMJN-6DFY6-9CCP6-7BKTT-D3WVR";
+                    return "PVMJN-6DFY6-9CCP6-7BKTT-D3WVR";
                 }
-                if (Win11Ed == "Professional")
+                if (Edition == "Professional")
                 {
-                    key = "W269N-WFGWX-YVC9B-4J6C9-T83GX";
+                    return "W269N-WFGWX-YVC9B-4J6C9-T83GX";
                 }
-                if (Win11Ed == "Professional N")
+                if (Edition == "Professional N")
                 {
-                    key = "MH37W-N47XK-V7XM9-C7227-GCQG9";
+                    return "MH37W-N47XK-V7XM9-C7227-GCQG9";
                 }
-                if (Win11Ed == "Education")
+                if (Edition == "Education")
                 {
-                    key = "NW6C2-QMPVW-D7KKK-3GKT6-VCFB2";
+                    return "NW6C2-QMPVW-D7KKK-3GKT6-VCFB2";
                 }
-                if (Win11Ed == "Education N")
+                if (Edition == "Education N")
                 {
-                    key = "2WH4N-8QGBV-H22JP-CT43Q-MDWWJ";
+                    return "2WH4N-8QGBV-H22JP-CT43Q-MDWWJ";
                 }
-                if (Win11Ed == "Enterprice")
+                if (Edition == "Enterprice")
                 {
-                    key = "NPPR9-FWDCX-D2C8J-H872K-2YT43";
+                    return "NPPR9-FWDCX-D2C8J-H872K-2YT43";
                 }
-                if (Win11Ed == "Enterprice N")
+                if (Edition == "Enterprice N")
                 {
-                    key = "DPH2V-TTNVB-4X9Q3-TJR4H-KHJW4";
+                    return "DPH2V-TTNVB-4X9Q3-TJR4H-KHJW4";
                 }
             }
+            return "";
         }
 
         private void cmd(String Command)

@@ -35,7 +35,7 @@
     <DebugType>full</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>..\Output\Windows Activator\bin\Debug</OutputPath>
-	<IntermediateOutputPath>..\Output\Windows Activator\obj\Debug</IntermediateOutputPath>
+    <IntermediateOutputPath>..\Output\Windows Activator\obj\Debug</IntermediateOutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -46,7 +46,7 @@
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>..\Output\Windows Activator\bin\Release</OutputPath>
-	<IntermediateOutputPath>..\Output\Windows Activator\obj\Release\</IntermediateOutputPath>
+    <IntermediateOutputPath>..\Output\Windows Activator\obj\Release\</IntermediateOutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -69,9 +69,7 @@
   </PropertyGroup>
   <PropertyGroup />
   <PropertyGroup />
-  <PropertyGroup>
-    <ApplicationManifest>app.manifest</ApplicationManifest>
-  </PropertyGroup>
+  <PropertyGroup />
   <PropertyGroup>
     <ApplicationIcon>Windows 11.ico</ApplicationIcon>
   </PropertyGroup>
@@ -80,6 +78,11 @@
   </PropertyGroup>
   <PropertyGroup>
     <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
