@@ -1,9 +1,0 @@
-E:\Projects\Visual Studio\Windows-Activator\bin\Debug\Windows Activator.exe
-E:\Projects\Visual Studio\Windows-Activator\bin\Debug\Windows Activator.pdb
-E:\Projects\Visual Studio\Windows-Activator\obj\Debug\Windows Activator.csproj.AssemblyReference.cache
-E:\Projects\Visual Studio\Windows-Activator\obj\Debug\Windows_Activator.Form_Activate.resources
-E:\Projects\Visual Studio\Windows-Activator\obj\Debug\Windows_Activator.Properties.Resources.resources
-E:\Projects\Visual Studio\Windows-Activator\obj\Debug\Windows Activator.csproj.GenerateResource.cache
-E:\Projects\Visual Studio\Windows-Activator\obj\Debug\Windows Activator.csproj.CoreCompileInputs.cache
-E:\Projects\Visual Studio\Windows-Activator\obj\Debug\Windows Activator.exe
-E:\Projects\Visual Studio\Windows-Activator\obj\Debug\Windows Activator.pdb
