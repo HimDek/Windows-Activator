@@ -13,6 +13,10 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="git">
+      <UniqueIdentifier>{c5052936-5e86-446f-b1eb-2f2dce81a1a6}</UniqueIdentifier>
+      <Extensions>.gitignore;.md</Extensions>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Windows-Activator.cpp">
@@ -36,5 +40,13 @@
     <Image Include="Windows 11.ico">
       <Filter>Resource Files</Filter>
     </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".gitignore">
+      <Filter>git</Filter>
+    </None>
+    <None Include="README.md">
+      <Filter>git</Filter>
+    </None>
   </ItemGroup>
 </Project>
