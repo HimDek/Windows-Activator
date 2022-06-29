@@ -1,24 +1,41 @@
-# Windows 8, 8.1, 10, 11 Activator
-Freely Activate all editions of Windows 8, 8.1, 10 and 11.
+<p align="center">
+ <img color="white" width="100px" src="logo.svg" />
+ <h1 align="center">Windows Activator</h1>
+ <p align="center">Activate all editions of Windows 8, 8.1, 10 and 11 free of cost</p>
+</p>
 
-<a href="https://github.com/HiDe-Techno-Tips/Windows-Activator/releases/latest/download/Windows.Activator.exe"> <img src="https://user-images.githubusercontent.com/61367380/119500767-c8143680-bd85-11eb-802d-4c5b750c349a.png" width="390"> </a>
+<p class="buttons" align="center">
+ <a href="https://github.com/HimDek/Windows-Activator/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/HimDek/Windows-Activator?style=flat-square"></a>
+ <a href="https://github.com/HimDek/Windows-Activator/pulls"><img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr/himdek/Windows-Activator?style=flat-square"></a>
+ <a href="https://github.com/HimDek/Windows-Activator/"><img src="https://img.shields.io/badge/GitHub-View%20sourcecode-blue?style=flat-square&logo=github&color=blueviolet" /></a>
+ <a href="https://himdek.com/Windows-Activator/"><img class="invisible" src="https://img.shields.io/badge/himdek.com-View%20in%20Website-blue?style=flat-square&logo=Internet-Explorer&color=blue" /></a>
+ <a href="https://github.com/HimDek/Windows-Activator/blob/master/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/HimDek/Windows-Activator?style=flat-square"></a>
+ <a href="https://github.com/HimDek/Windows-Activator/network"><img alt="GitHub forks" src="https://img.shields.io/github/forks/HimDek/Windows-Activator?style=flat-square"></a>
+ <a href="https://github.com/HimDek/Windows-Activator/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/HimDek/Windows-Activator?style=flat-square"></a>
+</p>
 
-## Support Me:
-<a href="https://paypal.me/HimDek?locale.x=en_GB" target="_blank"><img src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" height="80px"></a>
+<p class="buttons" align="center">
+  <a href="#how-to-use"><img src="https://img.shields.io/badge/How%20to%20use-blueviolet?style=for-the-badge" /></a>
+  <a href="https://himdek.com/?tab=donate"><img src="https://img.shields.io/badge/Donate-Support%20me-blue?style=for-the-badge&logo=Razorpay" /></a>
+  <a href="https://github.com/HiDe-Techno-Tips/Windows-Activator/releases/latest/download/Windows-Activator.exe"><img src="https://img.shields.io/badge/Download-blue?style=for-the-badge" /></a>
+</p>
 
-## How to Use:
-* [Download Windows.Activator.exe](https://github.com/HiDe-Techno-Tips/Windows-Activator/releases/latest/download/Windows.Activator.exe)
-* Run `Activate Windows.exe` and give Administrator priviledges.
-* Select Version:
+<br />
 
-![Untitled](https://user-images.githubusercontent.com/61367380/136324709-da989044-81a3-4b9a-9812-8fc629eb68ef.png)
+<h2 id="how-to-use" align="center">How to Use</h2>
+<p align="center">Download and run <a href="https://github.com/HiDe-Techno-Tips/Windows-Activator/releases/latest/download/Windows-Activator.exe">Windows-Activator.exe</a> with Administrator priviledges.</p>
 
-
-* Select Edition:
-
-![Untitled1](https://user-images.githubusercontent.com/61367380/136324727-eaa1800e-3034-4787-bd7e-e21f4b9766bb.png)
-
-
-* Activate Windows:
-
-![Untitled4](https://user-images.githubusercontent.com/61367380/136324742-330c85ef-8dba-4de4-af97-8e361b9eb364.png)
+<p align="center">
+<figure>
+    <p align="center"><img src="https://user-images.githubusercontent.com/61367380/136324709-da989044-81a3-4b9a-9812-8fc629eb68ef.png" /></p>
+    <figcaption><p align="center">▲ Select Version</p></figcaption>
+</figure>
+<figure>
+    <p align="center"><img src="https://user-images.githubusercontent.com/61367380/136324727-eaa1800e-3034-4787-bd7e-e21f4b9766bb.png" /></p>
+    <figcaption><p align="center">▲ Select Edition</p></figcaption>
+</figure>
+<figure>
+    <p align="center"><img src="https://user-images.githubusercontent.com/61367380/136324742-330c85ef-8dba-4de4-af97-8e361b9eb364.png" /></p>
+    <figcaption><p align="center">▲ Activate Windows</p></figcaption>
+</figure>
+</p>
