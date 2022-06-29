@@ -1,8 +1,8 @@
-<p align="center">
+<a href="https://himdek.com/Windows-Activator/"><p align="center">
  <img color="white" width="100px" src="logo.svg" />
  <h1 align="center">Windows Activator</h1>
  <p align="center">Activate all editions of Windows 8, 8.1, 10 and 11 free of cost</p>
-</p>
+</p></a>
 
 <p class="buttons" align="center">
  <a href="https://github.com/HimDek/Windows-Activator/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/HimDek/Windows-Activator?style=flat-square&label=Issues" /></a>
@@ -16,7 +16,7 @@
 
 <p class="buttons" align="center">
   <a href="#how-to-use"><img src="https://img.shields.io/badge/How%20to%20use-blueviolet?style=for-the-badge" /></a>
-  <a href="https://himdek.com/?tab=donate"><img src="https://img.shields.io/badge/Donate-Support%20me-blue?style=for-the-badge&logo=Razorpay" /></a>
+  <a href="https://himdek.com/?tab=donate"><img src="https://img.shields.io/badge/Donate-Support%20me-green?style=for-the-badge&logo=Razorpay" /></a>
   <a href="https://himdek.com/Windows-Activator/"><img class="invisible" src="https://img.shields.io/badge/himdek.com-View%20in%20Website-blue?style=for-the-badge&logo=Internet-Explorer&color=blue" /></a>
   <a href="https://github.com/HiDe-Techno-Tips/Windows-Activator/releases/latest/download/Windows-Activator.exe"><img src="https://img.shields.io/badge/Download-blue?style=for-the-badge" /></a>
 </p>
