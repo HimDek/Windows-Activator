@@ -1,8 +1,8 @@
-<a href="https://himdek.com/Windows-Activator/"><p align="center">
- <img color="white" width="100px" src="logo.svg" />
- <h1 align="center">Windows Activator</h1>
+<p align="center">
+ <a href="https://himdek.com/Windows-Activator/"><img color="white" width="100px" src="logo.svg" /></a>
+ <a href="https://himdek.com/Windows-Activator/"><h1 align="center">Windows Activator</h1></a>
  <p align="center">Activate all editions of Windows 8, 8.1, 10 and 11 free of cost</p>
-</p></a>
+</p>
 
 <p class="buttons" align="center">
  <a href="https://github.com/HimDek/Windows-Activator/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/HimDek/Windows-Activator?style=flat-square&label=Issues" /></a>
