@@ -5,18 +5,19 @@
 </p>
 
 <p class="buttons" align="center">
- <a href="https://github.com/HimDek/Windows-Activator/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/HimDek/Windows-Activator?style=flat-square"></a>
- <a href="https://github.com/HimDek/Windows-Activator/pulls"><img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr/himdek/Windows-Activator?style=flat-square"></a>
+ <a href="https://github.com/HimDek/Windows-Activator/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/HimDek/Windows-Activator?style=flat-square&label=Issues" /></a>
+ <a href="https://github.com/HimDek/Windows-Activator/pulls"><img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr/himdek/Windows-Activator?style=flat-square&label=Pull%20requests" /></a>
+ <a href="https://github.com/HimDek/Windows-Activator/actions/workflows/pages/pages-build-deployment/"><img src="https://img.shields.io/github/deployments/HimDek/Windows-Activator/github-pages?label=Build%20WebPage&logo=InternetExplorer&style=flat-square" /></a>
+ <a href="https://github.com/HimDek/Windows-Activator/blob/master/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/HimDek/Windows-Activator?style=flat-square&label=License" /></a>
  <a href="https://github.com/HimDek/Windows-Activator/"><img src="https://img.shields.io/badge/GitHub-View%20sourcecode-blue?style=flat-square&logo=github&color=blueviolet" /></a>
- <a href="https://himdek.com/Windows-Activator/"><img class="invisible" src="https://img.shields.io/badge/himdek.com-View%20in%20Website-blue?style=flat-square&logo=Internet-Explorer&color=blue" /></a>
- <a href="https://github.com/HimDek/Windows-Activator/blob/master/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/HimDek/Windows-Activator?style=flat-square"></a>
- <a href="https://github.com/HimDek/Windows-Activator/network"><img alt="GitHub forks" src="https://img.shields.io/github/forks/HimDek/Windows-Activator?style=flat-square"></a>
- <a href="https://github.com/HimDek/Windows-Activator/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/HimDek/Windows-Activator?style=flat-square"></a>
+ <a href="https://github.com/HimDek/Windows-Activator/network"><img alt="GitHub forks" src="https://img.shields.io/github/forks/HimDek/Windows-Activator?style=flat-square&label=Forks" /></a>
+ <a href="https://github.com/HimDek/Windows-Activator/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/HimDek/Windows-Activator?style=flat-square&label=Stars" /></a>
 </p>
 
 <p class="buttons" align="center">
   <a href="#how-to-use"><img src="https://img.shields.io/badge/How%20to%20use-blueviolet?style=for-the-badge" /></a>
   <a href="https://himdek.com/?tab=donate"><img src="https://img.shields.io/badge/Donate-Support%20me-blue?style=for-the-badge&logo=Razorpay" /></a>
+  <a href="https://himdek.com/Windows-Activator/"><img class="invisible" src="https://img.shields.io/badge/himdek.com-View%20in%20Website-blue?style=for-the-badge&logo=Internet-Explorer&color=blue" /></a>
   <a href="https://github.com/HiDe-Techno-Tips/Windows-Activator/releases/latest/download/Windows-Activator.exe"><img src="https://img.shields.io/badge/Download-blue?style=for-the-badge" /></a>
 </p>
 
