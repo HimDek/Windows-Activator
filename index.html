@@ -1,91 +1,23 @@
 <html lang="en">
-<head>
-<title>Windows Activator | Activate all editions of Windows 8 8.1 10 and 11 free of cost</title>
-<link rel="stylesheet" type="text/css" href="../style.css">
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-</head>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+        <title>Windows Activator | Activate all editions of Windows 8 8.1 10 and 11 free of cost</title>
+    
+        <link rel="stylesheet" type="text/css" href="../style.css">
+        <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+        <script src="../scripts/repopage.js"></script>
+    </head>
 
-<body>
-<header>
-<div id = "header"></div><br />
-</header>
-<script>
-fetch("../header.txt").then(function(response) {
-    	response.text().then(function(text) {
-    		document.getElementById("header").innerHTML = text;
-    	});
-});
-</script>
-
-<div id = "tabbar" class = "tab" style = "z-index:1"></div>
-<script>
-fetch("../tab.txt").then(function(response) {
-    	response.text().then(function(text) {
-    		document.getElementById("tabbar").innerHTML = text;
-    	});
-});
-</script>
-<script>
-function Menu(icon) {
-	var x = document.getElementById("tabbar");
-	if (x.className === "tab") {
-		x.className += " responsive";
-	} else {
-		x.className = "tab";
-	}
-}
-</script>
-
-<script>
-fetch("https://api.github.com/users/HimDek/repos").then(res => res.json()).then((out) => {
-	count = 0;
-	for (let i = 0; ; i++) {
-		if (out[i] == null) {
-			break;
-		}
-		if (out[i].name.toLowerCase() == out[i].owner.login.toLowerCase() || out[i].name.toLowerCase() == out[i].owner.login.toLowerCase() + ".github.io") {
-			continue;
-		}
-		count++;
-	}
-	document.getElementById("repos").innerHTML = document.getElementById("repos").innerHTML + " <span>" + count + "</span>"
-})
-</script>
-
-<script>
-fetch("https://api.github.com/users/HimDek/gists").then(res => res.json()).then((out) => {
-	count = 0;
-	divtxt = "";
-	for (let i = 0; ; i++) {
-		if (out[i] == null || Object.keys(out[i].files)[0] == null) {
-			break;
-		}
-		count++;
-	}
-	document.getElementById("gists").innerHTML = document.getElementById("gists").innerHTML + " <span>" + count + "</span>";
-})
-</script>
-
-<div id="content" class="main"></div>
-<script>
-fetch("README.md").then(function(response) {
-      response.text().then(function(text) {
-    	  document.getElementById("content").innerHTML = marked.parse(text);
-      });
-});
-</script>
-
-<footer>
-<div id = "footer"></div>
-</footer>
-<script>
-fetch("../footer.txt").then(function(response) {
-    	response.text().then(function(text) {
-    		document.getElementById("footer").innerHTML = text;
-    	});
-});
-</script>
-</body>
+    <body>
+        <header>
+            <div id = "header"></div><br />
+        </header>
+        <div id = "navbar" class = "nav"></div>
+        <div id="readme" class="content"></div>
+        <footer>
+            <div id = "footer"></div>
+        </footer>
+    </body>
 </html>
