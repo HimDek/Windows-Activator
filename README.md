@@ -24,7 +24,7 @@
 
 <br />
 
-<h2 id="how-to-use" align="center">How to Use</h2>
+<h2 id="how-to-use" align="center">How to Use <span id="repo-name">Windows-Activator</span></h2>
 <p align="center">Download and run <a href="https://github.com/HiDe-Techno-Tips/Windows-Activator/releases/latest/download/Windows-Activator.exe">Windows-Activator.exe</a> with Administrator priviledges.</p>
 
 <p align="center">
